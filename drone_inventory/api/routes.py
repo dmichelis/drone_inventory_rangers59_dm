@@ -43,7 +43,7 @@ def get_drones(current_user_token):
     response = drones_schemas.dump(drones)
     return jsonify(response)
 
-@api.route('/drones/<id>', methods = [GET])
+@api.route('/drones/<id>', methods = ['GET']
 @token_required
 def get_drone(current_user_token, id):
     drone = Drone.query.get(id)
