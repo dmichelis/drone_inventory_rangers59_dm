@@ -48,7 +48,7 @@ def get_drones(current_user_token):
 def get_drone(current_user_token, id):
     drone = Drone.query.get(id)
     response = drone_schema.dump(drone)
-    return jsonify(response)}
+    return jsonify(response)
 
 
 @api.route('/drones/<id>', methods = ['POST', 'PUT'])
